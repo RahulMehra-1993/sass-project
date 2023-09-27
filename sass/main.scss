@@ -1,0 +1,50 @@
+// abstracts
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+// base
+@import "base/base";
+@import "base/animation";
+@import "base/typography";
+@import "base/utilities";
+//components
+@import "components/button";
+@import "components/composition";
+@import "components/feature-box";
+@import "components/card";
+@import "components/story";
+@import "components/book";
+@import "components/popup";
+
+// layout
+@import "layout/header";
+@import "layout/grid";
+@import "layout/footer";
+@import "layout/navigation";
+// pages
+@import "pages/home";
+
+/* ///Saas major funtionality///
+1-declaration of code and writting it is easy
+2-we use Scss methodolgy to write sass code than actual sass methodoly because thats more difficult to read code
+3-nesting should not be exceeding up to 3rd layer or it will make code messy
+4-@mixin is used to create a variable with more than 1 properties inside it and also can have parameters or argument
+to chnage its properties ;@include is used to define that @mixin variable isnside any css element
+5-sass have some salient features like we can use color them to lighter medium darker with the %age
+6-@extend is used to dry up the code just like @mixin but its better to avoid @extend
+7-we can also use %function to craete custome functions for re-useablity
+8-installation- npm install node-sass --save-dev for development only
+*/
+
+//7-1 pattern
+
+//1- Base
+//2- Utils or abstract
+//3- Layout
+//4- Components
+//5- Pages
+//6- Themes
+//7- Vendors
+
+//Advance basic responsive design principles
+// 1- Fluid layouts  2- Responsive units 3- flexible images 4-media queries

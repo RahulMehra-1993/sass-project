@@ -1,0 +1,38 @@
+.section-about {
+  padding: 20rem 2rem;
+  // background-color: $primary-color-light;
+  color: $primary-color-medium;
+  
+}
+
+.section-features {
+  // margin:   0rem 5rem;
+  padding: 20rem 2rem  ;
+  color: $primary-color-light;
+}
+
+.section-price{
+  padding: 10rem 5rem;
+  color: $primary-color-medium;
+  background-color: transparent;
+
+}
+
+.section-testimonial{
+  padding: 20rem 0 ;
+}
+
+.section-book {
+  padding: 20rem 0;
+  // background-image: linear-gradient(to right,$primary-color-light,$primary-color-medium);
+}
+
+.footer{
+  padding: 5rem 0 ;
+  @include gradientBackground
+}
+
+.navigation-box{
+
+}
+

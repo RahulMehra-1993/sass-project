@@ -1,0 +1,64 @@
+.story {
+  color: $primary-color-light;
+  width: 80%;
+  margin: 3rem auto;
+  
+  &__shape {
+    width: 12rem;
+    height: 12rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(30% at 50% 50%);
+    position: relative;
+  }
+  &__img {
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    transform: scale(.6);
+  }
+  &__text {
+    
+    border-radius: 1rem;
+    padding: 2rem ;
+    height: 12rem;
+    box-shadow: 0 1rem 3rem darken($color: $light-color, $amount: 80%);
+    .paragraph {
+      height: 100%;
+    }
+  }
+  &__caption {
+    color: $light-color;
+    font-size: 1.3;
+    font-weight: 600;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 25rem);
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all .8s;
+    z-index: 1;
+    backface-visibility: hidden;
+  }
+
+  &:hover &__text {
+    @include boxShadow;
+  }
+  &:hover &__caption {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    width: 100%;
+    
+  }
+
+  &:hover &__img {
+    filter: blur(5px) brightness(80%);
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}

@@ -1,0 +1,72 @@
+body {
+  font-family: "Quicksand", sans-serif;
+  padding: 3rem;
+  // background-color: $primary-color;
+}
+
+.heading-primary {
+  backface-visibility: hidden;
+
+  &--main,
+  &--sub {
+    display: block;
+    color: $primary-color-light;
+    text-transform: uppercase;
+  }
+  &--main {
+    font-weight: 500;
+    font-size: 4rem;
+    letter-spacing: var(--small-spacing);
+    animation: rightAnimation;
+    animation-duration: 3s;
+  }
+  &--sub {
+    letter-spacing: 1px;
+    font-size: 2rem;
+    text-align: end;
+    font-weight: 700;
+    letter-spacing: var(--medium-spacing);
+    animation: leftAnimation;
+    animation-duration: 3s;
+    margin-bottom: 50px;
+    padding-right: 10rem;
+  }
+}
+
+.heading-secondary {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  // display: inline-block;
+}
+
+
+.heading-tertiary {
+font-size: $default-font-size;
+font-weight: 700;
+text-transform: uppercase;
+
+}
+
+.section-testimonial__heading {
+  padding: 10rem 0;
+}
+
+.paragraph{
+  font-size: 1.5rem;
+  &:not(:last-child){
+    margin-bottom: 3rem;
+  }
+  
+  &-small{
+    
+    font-size: 1.2rem;
+  }
+  &-large{
+    
+    font-size: 2rem;
+  }
+}
+.t-gradient {
+  @include textGradient
+}

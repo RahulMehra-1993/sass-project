@@ -1,0 +1,59 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  /* letter-spacing */
+  --small-spacing: 2px;
+  --medium-spacing: 4px;
+  --large-spacing: 6px;
+  /* font-weights */
+  --small-fontWeight: 400;
+  --medium-fontWeight: 500;
+  --large-fontWeight: 700;
+}
+
+//scrollbar
+/* scrollbar */
+/*Scroll bar nav*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 12px;
+  background: $primary-color;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: $primary-color;
+  /* height: 10px; */
+  -webkit-border-radius: 10px;
+  /* background: #0000007d; */
+  -webkit-box-shadow: inset 0 0 6px $primary-color-light;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  
+}
+body{
+  font-family: "Quicksand", sans-serif;
+  overflow-x: hidden;
+  
+  
+  margin:0 auto ;
+  box-sizing: border-box;
+  padding: 0 !important;
+  background-color: $primary-color;
+  
+  
+}

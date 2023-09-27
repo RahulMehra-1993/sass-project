@@ -1,0 +1,139 @@
+.btn {
+  
+  &,
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    font-weight: 500;
+    letter-spacing: var(--small-spacing);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: $default-font-size 5rem;
+    display: inline-block;
+    transition: all 0.2s;
+    border-radius: 100px;
+    animation: btnAnimation;
+    animation-duration: 3s;
+    position: relative;
+    animation-fill-mode: backwards;
+    
+    backface-visibility: hidden;
+      //change basic  <button> element
+      border: none;
+      cursor: pointer;
+  }
+
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 2px 4px 5px $primary-color-medium;
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      background-color: #fff;
+      border-radius: 10rem;
+      opacity: 0;
+    }
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 1px 2px 5px $primary-color-medium;
+  }
+
+  &::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &--white {
+    background-color: #fff;
+    color: #777;
+    
+  }
+  &--orange {
+    background-color: #fff;
+    color: $orange-color;
+  }
+  &--green {
+    background-color: #fff;
+    color: $green-color;
+  }
+
+  &--blue {
+    background-color: #fff;
+    color: $blue-color;
+  }
+
+  &--greenGradient{
+    background-image: linear-gradient(to right , $primary-color,$primary-color-medium);
+    color: $light-color;
+  }
+}
+
+.btn-text {
+  
+  &,
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: $primary-color-medium;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $primary-color-medium;
+    padding: 1rem;
+    backface-visibility: hidden;
+    transition: all 0.2s;
+    height: 4rem;
+
+    
+
+  }
+
+  &:hover {
+    background-color: $primary-color;
+    color: $light-color;
+    border-bottom: none;
+    transform: translateY(-2px);  
+    box-shadow: 0 1rem 2rem lighten($color: $dark-color, $amount: 50%);
+  }
+  &:active {
+    transform: translateY(0px);
+    box-shadow: 0 0.5rem 2rem lighten($color: $dark-color, $amount: 50%);
+  }
+
+  &--white {
+    &:link,
+    &:visited {
+      font-size: $default-font-size;
+      color: $primary-color-light;
+      display: inline-block;
+      text-decoration: none;
+      border-bottom: 1px solid $primary-color-light;
+      padding: 1rem 2rem;   
+      transition: all 0.2s;
+    }
+    &:hover {
+      background-color: $primary-color;
+      color: $light-color;
+      border-bottom: none;
+      border-radius: 1rem;
+      transform: translateY(-2px);
+     
+      box-shadow: 0 1rem 2rem lighten($color: $dark-color, $amount: 50%);
+    }
+    &:active {
+      transform: translateY(0px);
+      box-shadow: 0 0.5rem 2rem lighten($color: $dark-color, $amount: 50%);
+    }
+  }
+}

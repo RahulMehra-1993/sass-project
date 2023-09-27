@@ -1,0 +1,76 @@
+.u-center-text {
+  text-align: center !important;
+}
+.u-margin-bottom-huge {
+  margin-bottom: 10rem !important;
+}
+.u-margin-bottom-big {
+  margin-bottom: 5rem !important;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 2rem  !important;
+}
+.u-margin-top-huge {
+  margin-top: 10rem !important;
+}
+.u-margin-top-big {
+  margin-top: 5rem !important;
+}
+.u-margin-top-small {
+  margin-top: 2rem !important;
+}
+
+.u-margin-top-huge-reverse {
+  margin-top: -10rem !important;
+}
+.u-margin-top-big-reverse {
+  margin-top: -5rem !important;
+}
+.u-margin-top-small-reverse {
+  margin-top: -2rem !important;
+}
+
+.wave-pattern--1 {
+  width: 400%;
+  background-size:contain;
+  transform: translateX(-100%);
+  height: 50%;
+  // background-image: linear-gradient(to right, #1552c2, #709ef2);
+  svg {
+    path {
+      fill: url(#Gradient1);
+    }
+  }
+  animation: wave;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 0.2s;
+  animation-direction: alternate-reverse;
+}
+.wave-pattern--2 {
+  width: 400%;
+  background-size: contain;
+  transform: translateX(-100%);
+  height: 50%;
+  // background-image: linear-gradient(to right, #1552c2, #709ef2);
+  svg {
+    path {
+      fill: url(#Gradient2);
+    }
+  }
+  animation: wave;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 0.4s;
+  animation-direction: alternate-reverse;
+}
+
+.u-rotate-x-180 {
+  transform: rotateX(180deg) !important;
+}
+.u-rotate-y-180 {
+  transform: rotateY(180deg) !important;
+}

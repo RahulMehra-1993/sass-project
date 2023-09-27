@@ -1,0 +1,153 @@
+.book {
+  width: 100%;
+  height: 60rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    right: 0;
+    background-image: url(../../ImageSource/png/logo-no-background.png);
+    background-position: top 10% right 5%;
+    background-size: 10rem 10rem;
+    background-repeat: no-repeat;
+    
+  }
+
+  //   @include boxShadow;
+  &__video {
+    object-fit: cover;
+    height: 90%;
+    width: 100%;
+    // opacity: 0;
+    position: absolute;
+    @include absoluteCenter;
+z-index: 0;
+    // clip-path: polygon(60% 0, 100% 0%, 100% 100%, 30% 100%);
+  }
+  &__form {
+    background-image: linear-gradient(
+      100deg,
+      $primary-color 0%,
+      $primary-color 58%,
+      transparent 50%
+    );
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -50%);
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    .form {
+      width: 50%;
+      height: 100%;
+      padding: 5rem 4rem;
+
+      &__group {
+        // background-color: red;
+        position: relative;
+      }
+      &__input {
+        display: block;
+        width: 100%;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        padding: 1rem;
+        border-radius: 2px;
+        font-family: inherit;
+        background-color: $light-color;
+        color: $primary-color;
+        outline: none;
+        border: none;
+        border-bottom: 3px solid transparent;
+        transition: all 0.3s;
+        &::placeholder {
+          font-weight: 500;
+        }
+        &:focus {
+          border-bottom: 3px solid $primary-color-light;
+        }
+        &:focus:invalid {
+          border-bottom: 3px solid orange;
+        }
+      }
+      &__label {
+        display: none;
+
+        font-weight: 500;
+        letter-spacing: 1px;
+        transition: all 0.4s;
+      }
+
+      #name:focus + label,
+      #email:focus + label {
+        display: block;
+        position: absolute;
+        width: 30%;
+        top: -80%;
+        left: 0;
+        font-size: 1.5rem;
+        padding: 1rem;
+        z-index: 1;
+        color: $primary-color-light;
+      }
+
+      #name:placeholder-shown + label,
+      #email:placeholder-shown + label {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        z-index: 1;
+        color: transparent;
+        background-color: transparent;
+      }
+
+      &__radio-group {
+        color: $light-color;
+        display: inline-block;
+        
+        &:not(:last-child) {
+          margin-right: 4rem;
+          margin-bottom: 1rem;
+        }
+      }
+
+      &__radio-label {
+        font-size: 1.4rem;
+        cursor: pointer;
+        position: relative;
+        padding-left: 3rem;
+      }
+
+      &__radio-button {
+        @include absoluteCenter;
+        left: 1rem;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        border: 0.2rem solid $primary-color-light;
+        &::after {
+          content: "";
+          @include absoluteCenter;
+          height: 1rem;
+          width: 1rem;
+          border-radius: 50%;
+          background-color: $primary-color-light;
+          opacity: 0;
+          transition: opacity 0.3s;
+          
+        }
+      }
+
+      &__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+        opacity: 1;
+      }
+    }
+  }
+}

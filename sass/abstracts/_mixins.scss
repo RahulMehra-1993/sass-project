@@ -1,0 +1,62 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin gradientBackground {
+  background-image: linear-gradient(
+    to right,
+    $primary-color,
+    $primary-color-medium,
+    $primary-color
+  );
+  background-size: cover;
+}
+
+@mixin commonGradientProperties {
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin textGradient {
+  background-image: linear-gradient(
+    to right,
+    $primary-color,
+    $primary-color-medium,
+    $primary-color
+  );
+  @include commonGradientProperties;
+  &-redyellow {
+    background-image: linear-gradient(to right, red, yellow);
+    @include commonGradientProperties;
+  }
+  &-bluegreen {
+    background-image: linear-gradient(to right, blue, green);
+    @include commonGradientProperties;
+  }
+  &-orangegreen {
+    background-image: linear-gradient(to right, orange, green);
+    @include commonGradientProperties;
+  }
+  &-redpink {
+    background-image: linear-gradient(to right, red, pink);
+    @include commonGradientProperties;
+  }
+}
+
+@mixin boxShadow {
+  box-shadow: 0 0.5rem 2rem $primary-color-light;
+}
+
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
